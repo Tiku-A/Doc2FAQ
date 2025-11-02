@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${appName} + ' - Document to FAQ Converter'">Doc2FAQ - Document to FAQ Converter</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1 th:text="${appName}">Doc2FAQ</h1>
+                <span class="version" th:text="'v' + ${appVersion}">v1.0.0-SNAPSHOT</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="hero-section">
+                <h2 class="hero-title">Document to FAQ Converter</h2>
+                <p class="hero-description" th:text="${description}">
+                    Transform your documents into comprehensive FAQ formats with ease. 
+                    Upload documents and let our intelligent system generate relevant 
+                    questions and answers to improve accessibility and understanding.
+                </p>
+            </div>
+
+            <div class="features-section">
+                <h3>Key Features</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📄</div>
+                        <h4>Document Processing</h4>
+                        <p>Support for various document formats including PDF, Word, and text files</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h4>AI-Powered Analysis</h4>
+                        <p>Intelligent extraction of key information to generate relevant Q&A pairs</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h4>FAQ Generation</h4>
+                        <p>Automatic creation of well-structured FAQ documents from your content</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-section">
+                <div class="status-card">
+                    <h3>Application Status</h3>
+                    <div class="status-indicator">
+                        <span class="status-dot active"></span>
+                        <span class="status-text">Application is running successfully</span>
+                    </div>
+                    <p class="status-description">
+                        The Doc2FAQ application is up and running. This is the initial setup phase - 
+                        core features will be added in upcoming releases.
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Doc2FAQ Application. Ready for feature development.</p>
+        </footer>
+    </div>
+</body>
+</html>
